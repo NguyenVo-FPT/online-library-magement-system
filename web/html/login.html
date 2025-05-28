@@ -4,23 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/components.css">
 </head>
 <body class="login-page">
-    <p>
-        <h1>Login | <a href="../index.html">Home</a></h1>
-    </p>
-    
-    <p>
-        Don't have an account?
-        <a href="signup.html">Register!</a>
-    </p>
-
-    <form action="" method="post">
-        <label for="email">Email:</label>
-        <input type="email" name="email">
-        <label for="password">Password:</label>
-        <input type="password" name="password">
-        <input type="submit" value="Sign Up">
-    </form>
+    <div class="">
+        <div class="form-container login-form">
+            <p><h1>Login | <a href="../index.html">Home</a></h1></p>
+            <form action="../LoginController" method="post">
+                <label for="email" class="lbel">Email</label>
+                <input type="email" name="email" class="input-field">
+                <label for="password" class="lbel">Password</label>
+                <input type="password" name="password" class="input-field">
+                <input type="submit" value="Sign Up" class="btn">
+            </form>
+            <p> Don't have an account? <a href="signup.html">Register!</a></p>
+        </div>
+    </div>
 </body>
 </html>
