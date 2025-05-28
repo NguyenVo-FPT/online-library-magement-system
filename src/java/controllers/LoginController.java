@@ -83,12 +83,13 @@ public class LoginController extends HttpServlet {
 
         if (email != null && password != null) {
             User user = userDAO.getUserForLogin(email, password);
+            s.setAttribute("user", user);
             if (user != null) {
                 s.setAttribute("user", user);
                 if (user.getRole().equals("admin")) {
-                    response.sendRedirect("../online-library-management-system/html/admin.html");
+                    response.sendRedirect("../online-library-management-system/jsp/admin_panel.jsp");
                 } else {
-                    response.sendRedirect("../online-library-management-system/html/user.html");
+                    response.sendRedirect("../online-library-management-system/jsp/user_page.jsp");
                 }
             } else {
                 out.print("<h1>Your email or password is incorrect!</h1>");
