@@ -1,0 +1,12 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background-color: cadetblue;
+    padding: 20px;
+    text-align: center;
+}
+
+.content {
+    text-align: center;
+}
