@@ -86,9 +86,9 @@ public class LoginController extends HttpServlet {
             if (user != null) {
                 s.setAttribute("user", user);
                 if (user.getRole().equals("admin")) {
-                    response.sendRedirect("admin.html");
+                    response.sendRedirect("../online-library-management-system/html/admin.html");
                 } else {
-                    response.sendRedirect("user.html");
+                    response.sendRedirect("../online-library-management-system/html/user.html");
                 }
             } else {
                 out.print("<h1>Your email or password is incorrect!</h1>");
