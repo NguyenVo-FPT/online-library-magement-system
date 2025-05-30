@@ -17,15 +17,6 @@
                 <h2>Wellcome back! </h2>
                 <p><a href="../LogoutController">Log out</a></p>
             </div>
-
-            <div class="content">
-                <div><a href="">system config</a></div>
-                <div>update soon!</div>
-            </div>
-
-            <div class="footer">
-
-            </div>
         </div>
     </body>
 </html>

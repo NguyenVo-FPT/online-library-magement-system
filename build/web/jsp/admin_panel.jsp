@@ -19,7 +19,9 @@
             </div>
 
             <div class="content">
+                <h2>Admin Dashboard</h2>
                 <div><a href="../SystemConfigController">system config</a></div>
+                <div><a href="../BookController">Book Mangement</a></div>
                 <div>update soon!</div>
             </div>
 

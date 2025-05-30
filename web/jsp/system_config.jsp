@@ -20,20 +20,19 @@
             <table>
                 <tr>
                     <th>CONFIG KEY</th>
+                    <th>CONFIG VALUE</th>
                     <th>DESCRIPTION</th>
                 </tr>
                 <% for (SystemConfig sc : (ArrayList<SystemConfig>) request.getAttribute("list")) { %>
-                <form action="">
+
                     <tr>
                         <td><%= sc.getKey() %></td>
                         <td><%= sc.getValue() %></td>
                         <td><%= sc.getDescription() %></td>
-                        <td><input type="submit" value="edit"></td>
                     </tr>
-                </form>
                 <% } %>
             </table>
-
+            <a href="ConfigEditController">Edit</a>
         </div>
     </body>
 </html>

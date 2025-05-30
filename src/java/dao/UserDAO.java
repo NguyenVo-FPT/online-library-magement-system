@@ -1,6 +1,5 @@
 package dao;
 
-import interfaces.IUserDAO;
 import dto.User;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -8,9 +7,7 @@ import java.sql.Statement;
 import java.sql.ResultSet;
 import config.db;
 
-public class UserDAO implements IUserDAO {
-
-    @Override
+public class UserDAO {
     public User getUserByEmail(String email) {
         User result = null;
         Connection cn = null;
@@ -48,8 +45,7 @@ public class UserDAO implements IUserDAO {
 
         return result;
     }
-
-    @Override
+    
     public User getUserForLogin(String email, String password) {
         User result = null;
         Connection cn = null;
@@ -89,7 +85,6 @@ public class UserDAO implements IUserDAO {
         return result;
     }
 
-    @Override
     public int addNewUser(User user) {
         int result = 0;
         Connection cn = null;
@@ -120,15 +115,4 @@ public class UserDAO implements IUserDAO {
         }
         return result;
     }
-
-    @Override
-    public int deleteUser(User user) {
-        throw new UnsupportedOperationException("Unimplemented method 'deleteUser'");
-    }
-
-    @Override
-    public int updateUser(User user) {
-        throw new UnsupportedOperationException("Unimplemented method 'updateUser'");
-    }
-
 }

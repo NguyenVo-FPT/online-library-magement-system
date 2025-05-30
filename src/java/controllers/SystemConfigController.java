@@ -9,7 +9,6 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 
 import dao.SystemConfigDAO;
-import dto.SystemConfig;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
