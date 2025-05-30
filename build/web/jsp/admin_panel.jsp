@@ -12,6 +12,16 @@
         <title>Admin Panel</title>
     </head>
     <body class="admin-page">
+        <%@ page import="dto.User" %>
+        
+        <% User user = (User) session.getAttribute("user"); %>
+        <%
+        if (user == null || !"admin".equals(user.getRole())) {
+            response.sendRedirect("../index.html");
+            return;
+        }
+        %>
+        
         <div class="">
             <div class="header">
                 <h2>Wellcome back! </h2>
@@ -20,7 +30,7 @@
 
             <div class="content">
                 <h2>Admin Dashboard</h2>
-                <div><a href="../SystemConfigController">system config</a></div>
+                <div><a href="controllers/SystemConfigController">system config</a></div>
                 <div><a href="../BookController">Book Mangement</a></div>
                 <div>update soon!</div>
             </div>

@@ -83,13 +83,12 @@ public class LoginController extends HttpServlet {
         if (email != null && password != null) {
             User user = userDAO.getUserForLogin(email, password);
             if (user != null) {
-                request.setAttribute("user", user);
+                HttpSession s = request.getSession();
+                s.setAttribute("user", user);
                 if (user.getRole().equals("admin")) {
-                    request.getRequestDispatcher("../online-library-management-system/jsp/admin_panel.jsp").forward(request, response);
-                    //response.sendRedirect("../online-library-management-system/jsp/admin_panel.jsp");
-                    //out.print(user.getEmail());
+                    response.sendRedirect("jsp/admin_panel.jsp");
                 } else {
-                    request.getRequestDispatcher("../online-library-management-system/jsp/user_page.jsp").forward(request, response);
+                    request.getRequestDispatcher("jsp/user_page.jsp").forward(request, response);
                 }
             } else {
                 out.print("<h1>Your email or password is incorrect!</h1>");
@@ -97,6 +96,9 @@ public class LoginController extends HttpServlet {
         } else {
             out.print("<h1>Email or Password can not be blank!</h1>");
         }
+        
+
+    
     }
 
     /**
